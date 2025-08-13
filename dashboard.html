@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h2>Portfolio Dashboard</h2>
+            </div>
+            <div class="nav-menu">
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#certificates" class="nav-link">Certificates</a>
+                <a href="#process" class="nav-link">Training Process</a>
+                <a href="#courses" class="nav-link">Courses</a>
+                <button class="logout-btn" id="logoutBtn">Logout</button>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <div class="portfolio-content">
+                <div class="profile-card">
+                    <div class="profile-image">
+                        <div class="avatar">JD</div>
+                    </div>
+                    <div class="profile-info">
+                        <h1 class="profile-name">John Doe</h1>
+                        <p class="profile-title">Senior Training Specialist & Portfolio Manager</p>
+                        <div class="profile-stats">
+                            <div class="stat">
+                                <span class="stat-number">150+</span>
+                                <span class="stat-label">Students Trained</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">25</span>
+                                <span class="stat-label">Certificates</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">5+</span>
+                                <span class="stat-label">Years Experience</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="background-card">
+                    <h2>Professional Background</h2>
+                    <div class="background-content">
+                        <div class="background-item">
+                            <div class="bg-icon">🎓</div>
+                            <div class="bg-info">
+                                <h3>Education</h3>
+                                <p>Master's in Business Administration, Bachelor's in Computer Science</p>
+                            </div>
+                        </div>
+                        <div class="background-item">
+                            <div class="bg-icon">💼</div>
+                            <div class="bg-info">
+                                <h3>Experience</h3>
+                                <p>5+ years in corporate training, specializing in professional development and certification programs</p>
+                            </div>
+                        </div>
+                        <div class="background-item">
+                            <div class="bg-icon">🏆</div>
+                            <div class="bg-info">
+                                <h3>Achievements</h3>
+                                <p>Top-rated trainer with 98% student satisfaction rate, certified in multiple training methodologies</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates-section">
+        <div class="container">
+            <h2 class="section-title">My Certificates</h2>
+            <div class="certificates-grid">
+                <div class="certificate-card">
+                    <div class="cert-image">🏅</div>
+                    <h3>Project Management Professional (PMP)</h3>
+                    <p>Project Management Institute</p>
+                    <span class="cert-date">2023</span>
+                </div>
+                <div class="certificate-card">
+                    <div class="cert-image">📊</div>
+                    <h3>Certified Scrum Master (CSM)</h3>
+                    <p>Scrum Alliance</p>
+                    <span class="cert-date">2022</span>
+                </div>
+                <div class="certificate-card">
+                    <div class="cert-image">🎯</div>
+                    <h3>Six Sigma Black Belt</h3>
+                    <p>American Society for Quality</p>
+                    <span class="cert-date">2021</span>
+                </div>
+                <div class="certificate-card">
+                    <div class="cert-image">💻</div>
+                    <h3>AWS Solutions Architect</h3>
+                    <p>Amazon Web Services</p>
+                    <span class="cert-date">2023</span>
+                </div>
+                <div class="certificate-card">
+                    <div class="cert-image">🔒</div>
+                    <h3>Certified Information Security Manager</h3>
+                    <p>ISACA</p>
+                    <span class="cert-date">2022</span>
+                </div>
+                <div class="certificate-card">
+                    <div class="cert-image">📈</div>
+                    <h3>Digital Marketing Certification</h3>
+                    <p>Google</p>
+                    <span class="cert-date">2021</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Process Section -->
+    <section id="process" class="process-section">
+        <div class="container">
+            <h2 class="section-title">Our Training Process</h2>
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Initial Consultation</h3>
+                        <p>We start with a comprehensive assessment of your current skills, career goals, and learning preferences to understand your unique needs.</p>
+                        <ul>
+                            <li>Skills assessment</li>
+                            <li>Goal setting session</li>
+                            <li>Learning style evaluation</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Customize Training Plan</h3>
+                        <p>Based on your consultation, we create a personalized learning path tailored to your specific objectives and timeline.</p>
+                        <ul>
+                            <li>Personalized curriculum design</li>
+                            <li>Timeline planning</li>
+                            <li>Resource allocation</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Module Selection</h3>
+                        <p>Choose from our comprehensive library of training modules, each designed to build specific competencies and skills.</p>
+                        <ul>
+                            <li>Module recommendations</li>
+                            <li>Prerequisite mapping</li>
+                            <li>Flexible scheduling</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Training Implementation and Certification</h3>
+                        <p>Execute your training plan with hands-on learning, regular assessments, and earn industry-recognized certifications.</p>
+                        <ul>
+                            <li>Interactive training sessions</li>
+                            <li>Progress tracking</li>
+                            <li>Certification exams</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Courses Section -->
+    <section id="courses" class="courses-section">
+        <div class="container">
+            <h2 class="section-title">Available Training Courses</h2>
+            <p class="section-subtitle">Unlock your potential with our comprehensive training modules</p>
+            
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-image">
+                        <div class="course-icon">📊</div>
+                        <div class="course-badge">Premium</div>
+                    </div>
+                    <div class="course-content">
+                        <h3>Project Management Fundamentals</h3>
+                        <p>Master the essentials of project management including planning, execution, and closure.</p>
+                        <div class="course-details">
+                            <span class="duration">⏱️ 40 hours</span>
+                            <span class="level">📈 Beginner</span>
+                        </div>
+                        <div class="course-price">$299</div>
+                        <button class="course-btn locked" data-course="Project Management">
+                            🔒 Unlock Course
+                        </button>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-image">
+                        <div class="course-icon">💻</div>
+                        <div class="course-badge">Popular</div>
+                    </div>
+                    <div class="course-content">
+                        <h3>Cloud Computing Essentials</h3>
+                        <p>Learn cloud architecture, deployment models, and hands-on experience with AWS.</p>
+                        <div class="course-details">
+                            <span class="duration">⏱️ 60 hours</span>
+                            <span class="level">📈 Intermediate</span>
+                        </div>
+                        <div class="course-price">$499</div>
+                        <button class="course-btn locked" data-course="Cloud Computing">
+                            🔒 Unlock Course
+                        </button>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-image">
+                        <div class="course-icon">🔒</div>
+                        <div class="course-badge">Advanced</div>
+                    </div>
+                    <div class="course-content">
+                        <h3>Cybersecurity Fundamentals</h3>
+                        <p>Comprehensive security training covering risk management and threat analysis.</p>
+                        <div class="course-details">
+                            <span class="duration">⏱️ 50 hours</span>
+                            <span class="level">📈 Advanced</span>
+                        </div>
+                        <div class="course-price">$699</div>
+                        <button class="course-btn locked" data-course="Cybersecurity">
+                            🔒 Unlock Course
+                        </button>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-image">
+                        <div class="course-icon">📈</div>
+                        <div class="course-badge">New</div>
+                    </div>
+                    <div class="course-content">
+                        <h3>Digital Marketing Strategy</h3>
+                        <p>Complete digital marketing course including SEO, social media, and analytics.</p>
+                        <div class="course-details">
+                            <span class="duration">⏱️ 35 hours</span>
+                            <span class="level">📈 Beginner</span>
+                        </div>
+                        <div class="course-price">$399</div>
+                        <button class="course-btn locked" data-course="Digital Marketing">
+                            🔒 Unlock Course
+                        </button>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-image">
+                        <div class="course-icon">🎯</div>
+                        <div class="course-badge">Premium</div>
+                    </div>
+                    <div class="course-content">
+                        <h3>Agile & Scrum Mastery</h3>
+                        <p>Become a certified Scrum Master with hands-on agile methodology training.</p>
+                        <div class="course-details">
+                            <span class="duration">⏱️ 30 hours</span>
+                            <span class="level">📈 Intermediate</span>
+                        </div>
+                        <div class="course-price">$449</div>
+                        <button class="course-btn locked" data-course="Agile & Scrum">
+                            🔒 Unlock Course
+                        </button>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-image">
+                        <div class="course-icon">📋</div>
+                        <div class="course-badge">Popular</div>
+                    </div>
+                    <div class="course-content">
+                        <h3>Quality Management Systems</h3>
+                        <p>Learn ISO standards, quality control, and continuous improvement methodologies.</p>
+                        <div class="course-details">
+                            <span class="duration">⏱️ 45 hours</span>
+                            <span class="level">📈 Advanced</span>
+                        </div>
+                        <div class="course-price">$549</div>
+                        <button class="course-btn locked" data-course="Quality Management">
+                            🔒 Unlock Course
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Modal -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Unlock Training Course</h2>
+            <div id="selectedCourse" class="selected-course"></div>
+            <form id="paymentForm">
+                <div class="payment-methods">
+                    <h3>Select Payment Method</h3>
+                    <div class="payment-options">
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="card" checked>
+                            <span class="option-content">
+                                <div class="option-icon">💳</div>
+                                <span>Credit/Debit Card</span>
+                            </span>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="paypal">
+                            <span class="option-content">
+                                <div class="option-icon">💰</div>
+                                <span>PayPal</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div id="cardForm" class="payment-form">
+                    <div class="form-group">
+                        <label>Card Number</label>
+                        <input type="text" placeholder="1234 5678 9012 3456" maxlength="19">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Expiry Date</label>
+                            <input type="text" placeholder="MM/YY" maxlength="5">
+                        </div>
+                        <div class="form-group">
+                            <label>CVV</label>
+                            <input type="text" placeholder="123" maxlength="3">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Cardholder Name</label>
+                        <input type="text" placeholder="John Doe">
+                    </div>
+                </div>
+                
+                <button type="submit" class="payment-btn">
+                    <span class="btn-text">Complete Payment</span>
+                    <div class="spinner"></div>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
