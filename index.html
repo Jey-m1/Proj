@@ -3,84 +3,459 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
-    <link rel="stylesheet" href="styles.css">
+    <title>EduPlatform - Learn from the Best</title>
+    <link rel="stylesheet" href="homepage-styles.css">
 </head>
 <body>
-    <div class="login-container">
-        <div class="login-header">
-            <h1>Welcome Back</h1>
-            <p>Please sign in to your account</p>
-        </div>
-
-        <div id="successMessage" class="success-message">
-            Login successful! Redirecting...
-        </div>
-
-        <form id="loginForm">
-            <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" required>
-                <div class="error-message" id="emailError"></div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Elmondo Consultancy</h2>
             </div>
-
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
-                <div class="error-message" id="passwordError"></div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#courses" class="nav-link">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#portfolio" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+            </ul>
+            <div class="nav-auth">
+                <a href="login.html" class="login-link">Log In</a>
+                <a href="signup.html" class="signup-btn">Join for Free</a>
             </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
 
-            <div class="form-options">
-                <div class="remember-me">
-                    <input type="checkbox" id="remember" name="remember">
-                    <label for="remember">Remember me</label>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Achieve your career goals with
+                    <span class="highlight">Edmondo Consultancy</span>
+                </h1>
+                <p class="hero-description">
+                    Subscribe to build job-ready skills from world-class institutions and unlock your potential with our comprehensive learning platform.
+                </p>
+                <div class="hero-pricing">
+                    <p class="pricing-text">$24/month, cancel anytime</p>
                 </div>
-                <a href="forgot-password.html" class="forgot-password">Forgot password?</a>
+                <div class="hero-buttons">
+                    <p class="guarantee-text">or $160/year with 14-day money-back guarantee</p>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-visual">
+                    <!-- Replace the src attribute with your image path -->
+                    <img src="your-hero-image.jpg" alt="Student learning" class="main-hero-image">
+                    
+                    <!-- Floating cards overlay on the image -->
+                    <div class="floating-card card-1">
+                        <div class="card-icon">📚</div>
+                        <h3>350+ Courses</h3>
+                    </div>
+                    <div class="floating-card card-2">
+                        <div class="card-icon">🏆</div>
+                        <h3>Certificates</h3>
+                    </div>
+                    <div class="floating-card card-3">
+                        <div class="card-icon">🎓</div>
+                        <h3>Expert Instructors</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Universities Section -->
+    <section class="universities">
+        <div class="container">
+            <h2 class="section-title">Learn from 350+ top universities and companies</h2>
+            <div class="universities-grid">
+                <div class="university-logo">
+                    <div class="logo-placeholder">ILLINOIS</div>
+                </div>
+                <div class="university-logo">
+                    <div class="logo-placeholder">DUKE</div>
+                </div>
+                <div class="university-logo">
+                    <div class="logo-placeholder">GOOGLE</div>
+                </div>
+                <div class="university-logo">
+                    <div class="logo-placeholder">MICHIGAN</div>
+                </div>
+                <div class="university-logo">
+                    <div class="logo-placeholder">IBM</div>
+                </div>
+                <div class="university-logo">
+                    <div class="logo-placeholder">VANDERBILT</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses">
+        <div class="container">
+            <h2 class="section-title">Popular Courses</h2>
+            <p class="section-subtitle">Discover courses that will advance your career</p>
+            
+            <div class="course-categories">
+                <button class="category-btn active" data-category="all">All Courses</button>
+                <button class="category-btn" data-category="programming">Programming</button>
+                <button class="category-btn" data-category="design">Design</button>
+                <button class="category-btn" data-category="business">Business</button>
+                <button class="category-btn" data-category="data">Data Science</button>
             </div>
 
-            <button type="submit" class="login-btn" id="loginBtn">
-                <span class="btn-text">Sign In</span>
-                <div class="spinner"></div>
-            </button>
-        </form>
+            <div class="courses-grid">
+                <div class="course-card" data-category="programming">
+                    <div class="course-image">
+                        <img src="images/google-it-support.jpg" alt="Google IT Support Course" class="course-img">
+                        <div class="course-overlay">
+                            <span class="course-duration">6 months</span>
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-provider">Google</div>
+                        <h3 class="course-title">Google IT Support Professional Certificate</h3>
+                        <div class="course-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span class="rating-text">4.8 (15k reviews)</span>
+                        </div>
+                        <div class="course-skills">
+                            <span class="skill-tag">IT Support</span>
+                            <span class="skill-tag">Troubleshooting</span>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="divider">
-            <span>or</span>
+                <div class="course-card" data-category="design">
+                    <div class="course-image">
+                        <img src="images/graphic-design.jpg" alt="Graphic Design Course" class="course-img">
+                        <div class="course-overlay">
+                            <span class="course-duration">4 months</span>
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-provider">Adobe</div>
+                        <h3 class="course-title">Graphic Design Fundamentals</h3>
+                        <div class="course-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span class="rating-text">4.7 (8k reviews)</span>
+                        </div>
+                        <div class="course-skills">
+                            <span class="skill-tag">Photoshop</span>
+                            <span class="skill-tag">Illustrator</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" data-category="business">
+                    <div class="course-image">
+                        <img src="images/business-strategy.jpg" alt="Business Strategy Course" class="course-img">
+                        <div class="course-overlay">
+                            <span class="course-duration">3 months</span>
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-provider">Harvard Business School</div>
+                        <h3 class="course-title">Business Strategy Fundamentals</h3>
+                        <div class="course-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span class="rating-text">4.9 (12k reviews)</span>
+                        </div>
+                        <div class="course-skills">
+                            <span class="skill-tag">Strategy</span>
+                            <span class="skill-tag">Leadership</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" data-category="data">
+                    <div class="course-image">
+                        <img src="images/data-science.jpg" alt="Data Science Course" class="course-img">
+                        <div class="course-overlay">
+                            <span class="course-duration">8 months</span>
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-provider">IBM</div>
+                        <h3 class="course-title">Data Science Professional Certificate</h3>
+                        <div class="course-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span class="rating-text">4.6 (20k reviews)</span>
+                        </div>
+                        <div class="course-skills">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Machine Learning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" data-category="programming">
+                    <div class="course-image">
+                        <img src="images/react-native.jpg" alt="React Native Course" class="course-img">
+                        <div class="course-overlay">
+                            <span class="course-duration">5 months</span>
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-provider">Meta</div>
+                        <h3 class="course-title">React Native Development</h3>
+                        <div class="course-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span class="rating-text">4.5 (6k reviews)</span>
+                        </div>
+                        <div class="course-skills">
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Mobile Dev</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" data-category="design">
+                    <div class="course-image">
+                        <img src="images/ux-design.jpg" alt="UX Design Course" class="course-img">
+                        <div class="course-overlay">
+                            <span class="course-duration">6 months</span>
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-provider">Google</div>
+                        <h3 class="course-title">UX Design Professional Certificate</h3>
+                        <div class="course-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span class="rating-text">4.8 (25k reviews)</span>
+                        </div>
+                        <div class="course-skills">
+                            <span class="skill-tag">UX Design</span>
+                            <span class="skill-tag">Figma</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="view-more">
+                <button class="view-more-btn">View All Courses</button>
+            </div>
         </div>
+    </section>
 
-        <!-- Custom Google Sign-In Button -->
-        <button class="google-btn" id="googleLoginBtn">
-            <svg class="google-icon" viewBox="0 0 24 24" width="20" height="20">
-                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
-                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
-            </svg>
-            <span>Continue with Google</span>
-        </button>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">Student Success Stories</h2>
+            <p class="section-subtitle">See what our learners have achieved</p>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">👨‍💻</div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Sarah's Career Transformation</h3>
+                        <p>From marketing to data science in 6 months</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Data Science</span>
+                            <span class="tag">Career Change</span>
+                        </div>
+                        <div class="portfolio-outcome">
+                            <strong>Outcome:</strong> Landed Senior Data Analyst role at Fortune 500 company
+                        </div>
+                    </div>
+                </div>
 
-        <!-- Hidden Google Sign-In Button (for actual OAuth) -->
-        <div id="g_id_onload"
-             data-client_id="YOUR_GOOGLE_CLIENT_ID_HERE"
-             data-context="signin"
-             data-ux_mode="redirect"
-             data-login_uri="YOUR_CURRENT_PAGE_URL"
-             data-callback="handleCredentialResponse"
-             data-auto_prompt="false"
-             data-cancel_on_tap_outside="true">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">👩‍🎨</div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Michael's Design Journey</h3>
+                        <p>Built a successful freelance business</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">UX Design</span>
+                            <span class="tag">Freelancing</span>
+                        </div>
+                        <div class="portfolio-outcome">
+                            <strong>Outcome:</strong> $80k+ annual revenue from design projects
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">👨‍💼</div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Emma's Tech Leadership</h3>
+                        <p>Advanced to VP of Engineering</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Leadership</span>
+                            <span class="tag">Management</span>
+                        </div>
+                        <div class="portfolio-outcome">
+                            <strong>Outcome:</strong> Promoted to VP role with 40% salary increase
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <!-- Popup blocked notice -->
-        <div id="popupBlockedNotice" style="display: none; background: #fff3cd; color: #856404; padding: 10px; border-radius: 8px; margin-bottom: 15px; border: 1px solid #ffeaa7; font-size: 14px;">
-            <strong>Popup Blocked?</strong> Please allow popups for this site or try the alternative login method below.
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Everything you need to succeed in your career</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🎓</div>
+                    <h3>Professional Certificates</h3>
+                    <p>Industry-recognized certificates from top companies and universities</p>
+                    <ul class="service-features">
+                        <li>✓ Google Career Certificates</li>
+                        <li>✓ IBM Professional Certificates</li>
+                        <li>✓ University Specializations</li>
+                        <li>✓ Hands-on Projects</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🏢</div>
+                    <h3>Career Support</h3>
+                    <p>Personalized guidance to help you land your dream job</p>
+                    <ul class="service-features">
+                        <li>✓ Resume Review</li>
+                        <li>✓ Interview Preparation</li>
+                        <li>✓ Career Coaching</li>
+                        <li>✓ Job Search Strategy</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">👥</div>
+                    <h3>Mentorship Program</h3>
+                    <p>Connect with industry experts and experienced professionals</p>
+                    <ul class="service-features">
+                        <li>✓ 1-on-1 Mentoring</li>
+                        <li>✓ Industry Insights</li>
+                        <li>✓ Networking Opportunities</li>
+                        <li>✓ Peer Learning Groups</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🔬</div>
+                    <h3>Project-Based Learning</h3>
+                    <p>Build real-world projects that showcase your skills</p>
+                    <ul class="service-features">
+                        <li>✓ Portfolio Projects</li>
+                        <li>✓ Real Client Work</li>
+                        <li>✓ Team Collaborations</li>
+                        <li>✓ Industry Case Studies</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Mobile Learning</h3>
+                    <p>Learn anywhere, anytime with our mobile app</p>
+                    <ul class="service-features">
+                        <li>✓ Offline Downloads</li>
+                        <li>✓ Progress Sync</li>
+                        <li>✓ Interactive Exercises</li>
+                        <li>✓ Push Notifications</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🏆</div>
+                    <h3>Skill Assessment</h3>
+                    <p>Measure your progress and validate your expertise</p>
+                    <ul class="service-features">
+                        <li>✓ Skill Tests</li>
+                        <li>✓ Performance Analytics</li>
+                        <li>✓ Benchmarking</li>
+                        <li>✓ Improvement Recommendations</li>
+                    </ul>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="signup-link">
-            Don't have an account? <a href="signup.html">Sign up here</a>
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to transform your career?</h2>
+                <p>Join millions of learners who are already advancing their careers with EduPlatform</p>
+                <div class="cta-buttons">
+                    <a href="login.html" class="cta-secondary">Sign In</a>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Elmondo Consultancy</h3>
+                    <p>Empowering learners worldwide with quality education and career advancement opportunities.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Courses</h4>
+                    <ul>
+                        <li><a href="#programming">Programming</a></li>
+                        <li><a href="#design">Design</a></li>
+                        <li><a href="#business">Business</a></li>
+                        <li><a href="#data">Data Science</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#help">Help Center</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#community">Community</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#press">Press</a></li>
+                        <li><a href="#investors">Investors</a></li>
+                        <li><a href="#terms">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Elmondo Consultancy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="homepage-script.js"></script>
 </body>
 </html>
