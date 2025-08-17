@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Dashboard</title>
     <link rel="stylesheet" href="dashboard.css">
+
 </head>
 <body>
     <!-- Navigation Header -->
@@ -18,6 +19,71 @@
                 <a href="#certificates" class="nav-link">Certificates</a>
                 <a href="#process" class="nav-link">Training Process</a>
                 <a href="#courses" class="nav-link">Courses</a>
+                
+                <!-- Profile Section -->
+                <div class="profile-section">
+                    <div class="profile-avatar" id="profileAvatar">
+                        JD
+                    </div>
+                    
+                    <!-- Profile Dropdown -->
+                    <div class="profile-dropdown" id="profileDropdown">
+                        <div class="profile-header">
+                            <div class="avatar-large">JD</div>
+                            <div class="profile-name" id="profileName">John Doe</div>
+                            <div class="profile-email" id="profileEmail">john.doe@example.com</div>
+                        </div>
+                        
+                        <div class="profile-info">
+                            <div class="profile-item">
+                                <div class="profile-item-icon">👤</div>
+                                <div class="profile-item-text">
+                                    <div class="profile-item-label">Full Name</div>
+                                    <div class="profile-item-value" id="profileFullName">John Doe</div>
+                                </div>
+                            </div>
+                            
+                            <div class="profile-item">
+                                <div class="profile-item-icon">📧</div>
+                                <div class="profile-item-text">
+                                    <div class="profile-item-label">Email</div>
+                                    <div class="profile-item-value" id="profileEmailValue">john.doe@example.com</div>
+                                </div>
+                            </div>
+                            
+                            <div class="profile-item">
+                                <div class="profile-item-icon">📱</div>
+                                <div class="profile-item-text">
+                                    <div class="profile-item-label">Phone</div>
+                                    <div class="profile-item-value" id="profilePhone">+1 (555) 123-4567</div>
+                                </div>
+                            </div>
+                            
+                            <div class="profile-item">
+                                <div class="profile-item-icon">💼</div>
+                                <div class="profile-item-text">
+                                    <div class="profile-item-label">Position</div>
+                                    <div class="profile-item-value" id="profilePosition">Senior Training Specialist</div>
+                                </div>
+                            </div>
+                            
+                            <div class="profile-item">
+                                <div class="profile-item-icon">📅</div>
+                                <div class="profile-item-text">
+                                    <div class="profile-item-label">Member Since</div>
+                                    <div class="profile-item-value" id="profileJoinDate">January 2020</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-actions">
+                            <button class="profile-btn edit-profile-btn" id="editProfileBtn">
+                                ✏️ Edit Profile
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
                 <button class="logout-btn" id="logoutBtn">Logout</button>
             </div>
             <div class="hamburger" id="hamburger">
@@ -37,7 +103,7 @@
                         <div class="avatar">JD</div>
                     </div>
                     <div class="profile-info">
-                        <h1 class="profile-name">John Doe</h1>
+                        <h1 class="profile-name-main">John Doe</h1>
                         <p class="profile-title">Senior Training Specialist & Portfolio Manager</p>
                         <div class="profile-stats">
                             <div class="stat">
@@ -194,122 +260,159 @@
             <h2 class="section-title">Available Training Courses</h2>
             <p class="section-subtitle">Unlock your potential with our comprehensive training modules</p>
             
-            <div class="courses-grid">
-                <div class="course-card">
-                    <div class="course-image">
-                        <div class="course-icon">📊</div>
-                        <div class="course-badge">Premium</div>
-                    </div>
-                    <div class="course-content">
-                        <h3>Project Management Fundamentals</h3>
-                        <p>Master the essentials of project management including planning, execution, and closure.</p>
-                        <div class="course-details">
-                            <span class="duration">⏱️ 40 hours</span>
-                            <span class="level">📈 Beginner</span>
-                        </div>
-                        <div class="course-price">$299</div>
-                        <button class="course-btn locked" data-course="Project Management">
-                            🔒 Unlock Course
-                        </button>
-                    </div>
-                </div>
+            <!-- REPLACE your entire courses-grid section with this complete structure -->
 
-                <div class="course-card">
-                    <div class="course-image">
-                        <div class="course-icon">💻</div>
-                        <div class="course-badge">Popular</div>
-                    </div>
-                    <div class="course-content">
-                        <h3>Cloud Computing Essentials</h3>
-                        <p>Learn cloud architecture, deployment models, and hands-on experience with AWS.</p>
-                        <div class="course-details">
-                            <span class="duration">⏱️ 60 hours</span>
-                            <span class="level">📈 Intermediate</span>
-                        </div>
-                        <div class="course-price">$499</div>
-                        <button class="course-btn locked" data-course="Cloud Computing">
-                            🔒 Unlock Course
-                        </button>
-                    </div>
-                </div>
-
-                <div class="course-card">
-                    <div class="course-image">
-                        <div class="course-icon">🔒</div>
-                        <div class="course-badge">Advanced</div>
-                    </div>
-                    <div class="course-content">
-                        <h3>Cybersecurity Fundamentals</h3>
-                        <p>Comprehensive security training covering risk management and threat analysis.</p>
-                        <div class="course-details">
-                            <span class="duration">⏱️ 50 hours</span>
-                            <span class="level">📈 Advanced</span>
-                        </div>
-                        <div class="course-price">$699</div>
-                        <button class="course-btn locked" data-course="Cybersecurity">
-                            🔒 Unlock Course
-                        </button>
-                    </div>
-                </div>
-
-                <div class="course-card">
-                    <div class="course-image">
-                        <div class="course-icon">📈</div>
-                        <div class="course-badge">New</div>
-                    </div>
-                    <div class="course-content">
-                        <h3>Digital Marketing Strategy</h3>
-                        <p>Complete digital marketing course including SEO, social media, and analytics.</p>
-                        <div class="course-details">
-                            <span class="duration">⏱️ 35 hours</span>
-                            <span class="level">📈 Beginner</span>
-                        </div>
-                        <div class="course-price">$399</div>
-                        <button class="course-btn locked" data-course="Digital Marketing">
-                            🔒 Unlock Course
-                        </button>
-                    </div>
-                </div>
-
-                <div class="course-card">
-                    <div class="course-image">
-                        <div class="course-icon">🎯</div>
-                        <div class="course-badge">Premium</div>
-                    </div>
-                    <div class="course-content">
-                        <h3>Agile & Scrum Mastery</h3>
-                        <p>Become a certified Scrum Master with hands-on agile methodology training.</p>
-                        <div class="course-details">
-                            <span class="duration">⏱️ 30 hours</span>
-                            <span class="level">📈 Intermediate</span>
-                        </div>
-                        <div class="course-price">$449</div>
-                        <button class="course-btn locked" data-course="Agile & Scrum">
-                            🔒 Unlock Course
-                        </button>
-                    </div>
-                </div>
-
-                <div class="course-card">
-                    <div class="course-image">
-                        <div class="course-icon">📋</div>
-                        <div class="course-badge">Popular</div>
-                    </div>
-                    <div class="course-content">
-                        <h3>Quality Management Systems</h3>
-                        <p>Learn ISO standards, quality control, and continuous improvement methodologies.</p>
-                        <div class="course-details">
-                            <span class="duration">⏱️ 45 hours</span>
-                            <span class="level">📈 Advanced</span>
-                        </div>
-                        <div class="course-price">$549</div>
-                        <button class="course-btn locked" data-course="Quality Management">
-                            🔒 Unlock Course
-                        </button>
-                    </div>
-                </div>
+<div class="courses-grid">
+    <!-- Project Management Course -->
+    <div class="course-card">
+        <div class="course-image">
+            <div class="course-icon">📊</div>
+            <div class="course-badge">Premium</div>
+        </div>
+        <div class="course-content">
+            <h3>Project Management Fundamentals</h3>
+            <p>Master the essentials of project management including planning, execution, and closure.</p>
+            <div class="course-details">
+                <span class="duration">⏱️ 40 hours</span>
+                <span class="level">📈 Beginner</span>
+            </div>
+            <div class="course-price">$299</div>
+            <div class="course-actions">
+                <button class="course-btn locked" data-course="Project Management" data-price="299" data-course-id="pm-fundamentals">
+                    🔒 Unlock Course
+                </button>
+                <button class="course-btn access-btn hidden" data-course-id="pm-fundamentals">
+                    🎯 Start Training
+                </button>
             </div>
         </div>
+    </div>
+
+    <!-- Cloud Computing Course -->
+    <div class="course-card">
+        <div class="course-image">
+            <div class="course-icon">💻</div>
+            <div class="course-badge">Popular</div>
+        </div>
+        <div class="course-content">
+            <h3>Cloud Computing Essentials</h3>
+            <p>Learn cloud architecture, deployment models, and hands-on experience with AWS.</p>
+            <div class="course-details">
+                <span class="duration">⏱️ 60 hours</span>
+                <span class="level">📈 Intermediate</span>
+            </div>
+            <div class="course-price">$499</div>
+            <div class="course-actions">
+                <button class="course-btn locked" data-course="Cloud Computing" data-price="499" data-course-id="cloud-essentials">
+                    🔒 Unlock Course
+                </button>
+                <button class="course-btn access-btn hidden" data-course-id="cloud-essentials">
+                    🎯 Start Training
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cybersecurity Course -->
+    <div class="course-card">
+        <div class="course-image">
+            <div class="course-icon">🔒</div>
+            <div class="course-badge">Advanced</div>
+        </div>
+        <div class="course-content">
+            <h3>Cybersecurity Fundamentals</h3>
+            <p>Comprehensive security training covering risk management and threat analysis.</p>
+            <div class="course-details">
+                <span class="duration">⏱️ 50 hours</span>
+                <span class="level">📈 Advanced</span>
+            </div>
+            <div class="course-price">$699</div>
+            <div class="course-actions">
+                <button class="course-btn locked" data-course="Cybersecurity" data-price="699" data-course-id="cybersecurity-fundamentals">
+                    🔒 Unlock Course
+                </button>
+                <button class="course-btn access-btn hidden" data-course-id="cybersecurity-fundamentals">
+                    🎯 Start Training
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Digital Marketing Course -->
+    <div class="course-card">
+        <div class="course-image">
+            <div class="course-icon">📈</div>
+            <div class="course-badge">New</div>
+        </div>
+        <div class="course-content">
+            <h3>Digital Marketing Strategy</h3>
+            <p>Complete digital marketing course including SEO, social media, and analytics.</p>
+            <div class="course-details">
+                <span class="duration">⏱️ 35 hours</span>
+                <span class="level">📈 Beginner</span>
+            </div>
+            <div class="course-price">$399</div>
+            <div class="course-actions">
+                <button class="course-btn locked" data-course="Digital Marketing" data-price="399" data-course-id="digital-marketing">
+                    🔒 Unlock Course
+                </button>
+                <button class="course-btn access-btn hidden" data-course-id="digital-marketing">
+                    🎯 Start Training
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Agile & Scrum Course -->
+    <div class="course-card">
+        <div class="course-image">
+            <div class="course-icon">🎯</div>
+            <div class="course-badge">Premium</div>
+        </div>
+        <div class="course-content">
+            <h3>Agile & Scrum Mastery</h3>
+            <p>Become a certified Scrum Master with hands-on agile methodology training.</p>
+            <div class="course-details">
+                <span class="duration">⏱️ 30 hours</span>
+                <span class="level">📈 Intermediate</span>
+            </div>
+            <div class="course-price">$449</div>
+            <div class="course-actions">
+                <button class="course-btn locked" data-course="Agile & Scrum" data-price="449" data-course-id="agile-scrum">
+                    🔒 Unlock Course
+                </button>
+                <button class="course-btn access-btn hidden" data-course-id="agile-scrum">
+                    🎯 Start Training
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quality Management Course -->
+    <div class="course-card">
+        <div class="course-image">
+            <div class="course-icon">📋</div>
+            <div class="course-badge">Popular</div>
+        </div>
+        <div class="course-content">
+            <h3>Quality Management Systems</h3>
+            <p>Learn ISO standards, quality control, and continuous improvement methodologies.</p>
+            <div class="course-details">
+                <span class="duration">⏱️ 45 hours</span>
+                <span class="level">📈 Advanced</span>
+            </div>
+            <div class="course-price">$549</div>
+            <div class="course-actions">
+                <button class="course-btn locked" data-course="Quality Management" data-price="549" data-course-id="quality-management">
+                    🔒 Unlock Course
+                </button>
+                <button class="course-btn access-btn hidden" data-course-id="quality-management">
+                    🎯 Start Training
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
     </section>
 
     <!-- Payment Modal -->
@@ -367,6 +470,173 @@
             </form>
         </div>
     </div>
+
+    <!-- Profile Edit Modal -->
+    <div id="profileModal" class="profile-modal">
+        <div class="profile-modal-content">
+            <span class="modal-close" id="profileModalClose">&times;</span>
+            <h2>Edit Profile</h2>
+            
+            <form id="profileForm" class="profile-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" id="firstName" name="firstName" value="John" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" id="lastName" name="lastName" value="Doe" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="email" name="email" value="john.doe@example.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" id="phone" name="phone" value="+1 (555) 123-4567">
+                </div>
+                
+                <div class="form-group">
+                    <label>Position</label>
+                    <input type="text" id="position" name="position" value="Senior Training Specialist">
+                </div>
+                
+                <div class="form-group">
+                    <label>Department</label>
+                    <select id="department" name="department">
+                        <option value="training">Training & Development</option>
+                        <option value="hr">Human Resources</option>
+                        <option value="it">Information Technology</option>
+                        <option value="management">Management</option>
+                        <option value="consulting">Consulting</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Bio</label>
+                    <textarea id="bio" name="bio" placeholder="Tell us about yourself and your professional background...">Experienced training specialist with 5+ years in corporate training and professional development. Passionate about helping individuals achieve their career goals through comprehensive certification programs.</textarea>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>LinkedIn</label>
+                        <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/johndoe">
+                    </div>
+                    <div class="form-group">
+                        <label>Website</label>
+                        <input type="url" id="website" name="website" placeholder="https://johndoe.com">
+                    </div>
+                </div>
+                
+                <button type="submit" class="save-profile-btn">
+                    💾 Save Changes
+                </button>
+            </form>
+        </div>
+    </div>
+    <!-- footer.html -->
+<footer class="site-footer">
+    <div class="footer-container">
+        <!-- Footer Top Section -->
+        <div class="footer-top">
+            <div class="footer-section">
+                <h3 class="footer-title">About Us</h3>
+                <p class="footer-description">
+                    We are dedicated to providing exceptional services and creating meaningful connections with our community.
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Services</h3>
+                <ul class="footer-links">
+                    <li><a href="#web-design">Web Design</a></li>
+                    <li><a href="#development">Development</a></li>
+                    <li><a href="#consulting">Consulting</a></li>
+                    <li><a href="#support">Support</a></li>
+                    <li><a href="#maintenance">Maintenance</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Contact Info</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Business Street, City, State 12345</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+1 (555) 123-4567</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@yourwebsite.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Newsletter Subscription -->
+        <div class="newsletter-section">
+            <h3 class="newsletter-title">Stay Updated</h3>
+            <p class="newsletter-description">Subscribe to our newsletter for the latest updates and offers.</p>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+                <button type="submit" class="newsletter-btn">Subscribe</button>
+            </form>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p class="copyright">
+                    &copy; <span id="currentYear"></span> Your Website Name. All rights reserved.
+                </p>
+                <div class="footer-bottom-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                    <a href="#cookies">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+</footer>
+
+<!-- Font Awesome CDN for icons (add to your head section) -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> -->
 
     <script src="dashboard.js"></script>
 </body>
